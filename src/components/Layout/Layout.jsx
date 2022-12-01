@@ -1,16 +1,18 @@
-import "./Layout.scss" ;
+import './Layout.scss'
 
 import React from 'react'
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from '../Sidebar/Sidebar'
 
 
 const Layout = () => {
   return (
-    <div>
+    <div className="layout">
       <Sidebar />
- 
-      Layout
-      
+      <div className="page">
+        <span className="tags">&lt;Mustafa Bilal DOGAN&gt;</span>
+        
+        
+      </div>
     </div>
   )
 }

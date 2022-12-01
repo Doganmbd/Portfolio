@@ -5,6 +5,12 @@ import { Link, NavLink } from 'react-router-dom'
 import LogoM from '../../assets/images/mbd.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import {
+  faLinkedin,
+  faGithub
+
+} from '@fortawesome/free-brands-svg-icons'
+
 
 const Sidebar = () => {
   return (
@@ -38,7 +44,39 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faEnvelope} color="grey" />
         </NavLink>
       </nav>
-      SidebarIndex
+
+      <ul>
+        <li>
+          <a
+            href="https://github.com/Doganmbd"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              color="#4d4d4e"
+              className="github-link"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/mustafabilaldogan/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedin} 
+              color="#4d4d4e"
+              className="linkedin-icon"
+              
+            />
+          </a>
+        </li>
+        
+
+      </ul>
+       
     </div>
   )
 }

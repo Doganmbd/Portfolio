@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import mpng from '../../assets/images/m.png'
 import AnimatedLetters from '../AnimatedLetter/AnimatedLetters'
@@ -6,7 +6,21 @@ import './Home.scss'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['u', 's', 't', 'a', 'f', 'a'," ", 'b', 'i', 'l', 'a', 'l',","]
+  const nameArray = [
+    'u',
+    's',
+    't',
+    'a',
+    'f',
+    'a',
+    ' ',
+    'b',
+    'i',
+    'l',
+    'a',
+    'l',
+    ',',
+  ]
   const jobArray = [
     'w',
     'e',
@@ -24,12 +38,22 @@ const Home = () => {
     '.',
   ]
 
+
+  useEffect(() => {
+     
+    return () => {
+      setTimeout(() => {
+        setLetterClass('text-animate-hover')
+       }, 6000 )
+    }
+  }, [])
+  
   return (
-    <div>
+    <>
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-          <span className={letterClass}>H</span>
+            <span className={letterClass}>H</span>
             <span className={`${letterClass} _10`}>i</span>
             <span className={`${letterClass} _11`}>,</span>
             <br />
@@ -42,7 +66,7 @@ const Home = () => {
               strArray={nameArray}
               idx={15}
             />
-            <br /> 
+            <br />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
@@ -55,7 +79,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

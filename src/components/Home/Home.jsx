@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import mpng from '../../assets/images/m.png'
 import AnimatedLetters from '../AnimatedLetter/AnimatedLetters'
+import Logo from '../Logo/Logo'
 import './Home.scss'
 
 const Home = () => {
@@ -49,7 +50,7 @@ const Home = () => {
   }, [])
   
   return (
-    <>
+    <div>
       <div className="container home-page">
         <div className="text-zone">
           <h1>
@@ -79,7 +80,8 @@ const Home = () => {
           </Link>
         </div>
       </div>
-    </>
+      <Logo />
+    </div>
   )
 }
 

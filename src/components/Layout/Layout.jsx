@@ -9,10 +9,10 @@ const Layout = () => {
     <div className="layout">
       <Sidebar />
       <div className="page">
-        <span className="tags">&lt; Mustafa Bilal Dogan &gt;</span>
+        <span className="tags">&lt; M . b . d &gt;</span>
 
         <Outlet />{/* Home sayfasını içerde göstermesini sağladı. */}
-        <span className="bottom-tags">&lt; /Mustafa Bilal Dogan &gt;</span>
+        <span className="bottom-tags">&lt; /M . b . d &gt;</span>
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import gsap from 'gsap-trial'
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
 import LogoS from '../../assets/images/profiles.png'
 import './Logo.scss'
+import Loader from 'react-loaders'
 
 const Logo = () => {
   const bgRef = useRef()
@@ -39,6 +40,7 @@ const Logo = () => {
   }, [])
 
   return (
+    <>
     <div className="logo-container" ref={bgRef}>
       <img
         className="solid-logo"
@@ -138,6 +140,8 @@ m640 -38 c-1 -93 -17 -111 -18 -20 -1 45 3 77 9 77 6 0 10 -25 9 -57z m51
         </g>
       </svg>
     </div>
+    <Loader type="pacman" />
+    </>
   )
 }
 

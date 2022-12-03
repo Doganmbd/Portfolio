@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetter/AnimatedLetters'
 import "./Contact.scss"
@@ -24,7 +25,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
-    emailjs.sendForm('service_ylc8kdp', 'template_2e7aoew', form.current , myToken)
+    emailjs.sendForm('service_ylc8kdp', 'template_2e7aoew', form.current)
       .then(function(response) {
           alert('Message successfully sent!')
           window.location.reload(false)
@@ -85,8 +86,21 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        
-        
+        <div className="info-map">
+          Mustafa Bilal Doğan ,
+          
+          <br />
+          <br />         
+          <span>mbdoganwork@gmail.com</span>
+        </div>
+        <div className="map-wrap">
+          <MapContainer center={[41.100, 29.09]} zoom={11} scrollWheelZoom={false}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[41.100, 29.09]}>
+              <Popup>Mustafa Bilal lives here</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </div>
       <Loader type="pacman" />
     </>

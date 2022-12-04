@@ -1,5 +1,5 @@
 {
-  "homepage": "https://doganmbd.github.io/Portfolio/",
+  "homepage": "https://Doganmbd.github.io/Portfolio",
   "name": "react007-languagecard-project-2",
   "version": "0.1.0",
   "private": true,
@@ -51,6 +51,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh": "^2.8.9",
+    "gh-pages": "^4.0.0",
+    "pages": "^0.0.16"
   }
 }
